@@ -26,7 +26,7 @@ namespace NabilApp.Controllers
         [Route("Menu")]
         public ActionResult Index()
         {
-            var dish = GetDishes();
+            var dish = _context.Dishes.ToList();
             return View(dish);
         }
 
@@ -34,7 +34,7 @@ namespace NabilApp.Controllers
         [Route("Menu/Dania/{id:regex(\\d)}")]
         public ActionResult Details(int id)
         {
-            var dish = GetDishes().SingleOrDefault(c => c.Id == id);
+            var dish = _context.Dishes.SingleOrDefault(c => c.Id == id);
             if (dish == null)
             {
                 return HttpNotFound();

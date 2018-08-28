@@ -14,13 +14,13 @@ namespace NabilApp.Models
         public string Name { get; set; }
 
         [Display(Name = "Waga Dania")]
-        public double Weight { get; set; }
+        public short Weight { get; set; }
 
         [Display(Name = "Kaloryczność")]
-        public byte Kcal { get; set; }
+        public short Kcal { get; set; }
 
         [Display(Name = "Zdjęcie")]
-        public byte[] Img { get; set; }
+        public byte?[] Img { get; set; }
 
     }
 }
