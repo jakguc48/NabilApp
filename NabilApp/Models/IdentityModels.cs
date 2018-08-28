@@ -20,6 +20,11 @@ namespace NabilApp.Models
 
     public class ApplicationDbContext : IdentityDbContext<ApplicationUser>
     {
+
+
+        public DbSet<Dish> Dishes { get; set; }
+        public DbSet<Employee> Employees { get; set; }
+
         public ApplicationDbContext()
             : base("DefaultConnection", throwIfV1Schema: false)
         {
